@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     /** The button that brings to the list menu containing vegetables.*/
     private Button myVegetablesButton;
 
+    /** Test button. */
+    private Button myButtonX;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Sets up activity
@@ -40,12 +43,14 @@ public class MainActivity extends AppCompatActivity {
         myMeatButton = (Button)findViewById(R.id.MEAT_BUTTON);
         myFruitButton = (Button)findViewById(R.id.FRUIT_BUTTON);
         myVegetablesButton = (Button)findViewById(R.id.VEGETABLES_BUTTON);
+        myButtonX = (Button)findViewById(R.id.BUTTON_X);
 
         // ADDS BUTTON LISTENERS TO BUTTONS
         myDairyButton.setOnClickListener(new ActivityOnClickListener(new DairyActivity()));
         myMeatButton.setOnClickListener(new ActivityOnClickListener(new MeatActivity()));
         myFruitButton.setOnClickListener(new ActivityOnClickListener(new FruitActivity()));
         myVegetablesButton.setOnClickListener(new ActivityOnClickListener(new VegetablesActivity()));
+        myButtonX.setOnClickListener(new TestListener());
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -99,6 +104,15 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(final View theButton) {
             Intent newIntent = new Intent(MainActivity.this, myActivity.getClass());
             startActivity(newIntent);
+        }
+    }
+
+    private class TestListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(final View theButton) {
+            Toast.makeText(MainActivity.this,"THE BUTON X WAS PRESSED",
+                    Toast.LENGTH_SHORT).show();
         }
     }
 }
