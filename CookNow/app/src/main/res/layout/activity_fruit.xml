@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="PLACEHOLDER, THIS ACTIVITY \nDISPLAYS ALL FRUIT ITEMS"
-        android:id="@+id/textView2"
+        android:id="@+id/PLACEHOLDERTEXT"
         android:layout_marginTop="179dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
