@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(final View theButton) {
-            Toast.makeText(MainActivity.this,"THE BUTON X WAS PRESSED",
+            Toast.makeText(MainActivity.this,"THE BUTON X WAS PRESSED BY MIKE",
                     Toast.LENGTH_SHORT).show();
         }
     }
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(final View theButton) {
-            Toast.makeText(MainActivity.this,"THE OTHER BUTTON WAS PRESSED",
+            Toast.makeText(MainActivity.this,"THE OTHER BUTTON WAS PRESSED BY MIKE",
                     Toast.LENGTH_SHORT).show();
         }
     }
