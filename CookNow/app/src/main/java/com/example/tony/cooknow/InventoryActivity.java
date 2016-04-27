@@ -64,13 +64,8 @@ public class InventoryActivity extends AppCompatActivity {
         myOtherButton.setOnClickListener(new ActivityOnClickListener(new OtherActivity()));
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(InventoryActivity.this, "PLACEHOLDER for adding ingredient", Toast.LENGTH_LONG).show();
-            }
-        });
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new ActivityOnClickListener(new AddIngredientActivity()));
     }
 
     @Override
