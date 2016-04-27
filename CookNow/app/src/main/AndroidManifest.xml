@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".InventoryActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,7 +21,13 @@
         <activity android:name=".DairyActivity" />
         <activity android:name=".MeatActivity" />
         <activity android:name=".VegetablesActivity" />
-        <activity android:name=".FruitActivity"></activity>
+        <activity android:name=".FruitActivity"/>
+        <activity android:name=".RecipesActivity"/>
+        <activity android:name=".SearchActivity"/>
+        <activity android:name=".FavoritesActivity"/>
+        <activity android:name=".HistoryActivity"/>
+        <activity android:name=".OtherActivity" >
+        </activity>
     </application>
 
 </manifest>

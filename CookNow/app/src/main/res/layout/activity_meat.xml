@@ -15,7 +15,6 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="PLACEHOLDER, THIS ACTIVITY \nDISPLAYS ALL MEAT ITEMS"
         android:id="@+id/textView3"
-        android:layout_marginTop="183dp"
-        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

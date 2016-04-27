@@ -9,5 +9,6 @@ public class MeatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meat);
+        setTitle("Meat Inventory");
     }
 }
