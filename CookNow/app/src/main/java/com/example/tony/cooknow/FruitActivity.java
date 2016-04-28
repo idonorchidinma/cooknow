@@ -14,5 +14,6 @@ public class FruitActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fruit);
         myPlaceholderText = (TextView) findViewById(R.id.PLACEHOLDERTEXT);
         myPlaceholderText.append("akjfhsakjda");
+        setTitle("Fruit Inventory");
     }
 }

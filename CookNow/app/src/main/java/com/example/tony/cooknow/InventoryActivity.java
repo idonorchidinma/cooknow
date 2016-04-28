@@ -1,10 +1,10 @@
 package com.example.tony.cooknow;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class InventoryActivity extends AppCompatActivity {
 
     /** The button that brings to the list menu containing dairy.*/
     private Button myDairyButton;
@@ -32,20 +32,32 @@ public class MainActivity extends AppCompatActivity {
     /** Test button. */
     private Button myButtonX;
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Sets up activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        ActionBar actionBar = getActionBar();
+//        actionBar.setIcon(R.drawable.ic_list_black_24dp);
+//        actionBar.setDisplayUseLogoEnabled(true);
+//        actionBar.setDisplayHomeAsUpEnabled(true);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setLogo(R.drawable.ic_list_black_48dp);
         setSupportActionBar(toolbar);
+        setTitle("Inventory");
 
         // CONNECTS BUTTONS IN XML LAYOUT FILE TO THIS JAVA CLASS
         myDairyButton = (Button)findViewById(R.id.DAIRY_BUTTON);
         myMeatButton = (Button)findViewById(R.id.MEAT_BUTTON);
         myFruitButton = (Button)findViewById(R.id.FRUIT_BUTTON);
         myVegetablesButton = (Button)findViewById(R.id.VEGETABLES_BUTTON);
+<<<<<<< HEAD:CookNow/app/src/main/java/com/example/tony/cooknow/MainActivity.java
         myButtonX = (Button)findViewById(R.id.BUTTON_X);
+=======
+>>>>>>> origin/master:CookNow/app/src/main/java/com/example/tony/cooknow/InventoryActivity.java
         myOtherButton = (Button)findViewById(R.id.OTHER_BUTTON);
 
         // ADDS BUTTON LISTENERS TO BUTTONS
@@ -53,23 +65,22 @@ public class MainActivity extends AppCompatActivity {
         myMeatButton.setOnClickListener(new ActivityOnClickListener(new MeatActivity()));
         myFruitButton.setOnClickListener(new ActivityOnClickListener(new FruitActivity()));
         myVegetablesButton.setOnClickListener(new ActivityOnClickListener(new VegetablesActivity()));
+<<<<<<< HEAD:CookNow/app/src/main/java/com/example/tony/cooknow/MainActivity.java
         myButtonX.setOnClickListener(new TestListener());
         myOtherButton.setOnClickListener(new TestListener2());
+=======
+        myOtherButton.setOnClickListener(new ActivityOnClickListener(new OtherActivity()));
+>>>>>>> origin/master:CookNow/app/src/main/java/com/example/tony/cooknow/InventoryActivity.java
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "PLACEHOLDER for adding ingredient", Toast.LENGTH_LONG).show();
-            }
-        });
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new ActivityOnClickListener(new AddIngredientActivity()));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.activity_main_actions, menu);
         return true;
     }
 
@@ -106,11 +117,12 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(final View theButton) {
-            Intent newIntent = new Intent(MainActivity.this, myActivity.getClass());
+            Intent newIntent = new Intent(InventoryActivity.this, myActivity.getClass());
             startActivity(newIntent);
         }
     }
 
+<<<<<<< HEAD:CookNow/app/src/main/java/com/example/tony/cooknow/MainActivity.java
     private class TestListener implements View.OnClickListener {
 
         @Override
@@ -128,4 +140,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         }
     }
+=======
+//    private class TestListener2 implements View.OnClickListener {
+//
+//        @Override
+//        public void onClick(final View theButton) {
+//            Toast.makeText(InventoryActivity.this,"THE OTHER BUTTON WAS PRESSED BY Tony",
+//                    Toast.LENGTH_SHORT).show();
+//        }
+//    }
+>>>>>>> origin/master:CookNow/app/src/main/java/com/example/tony/cooknow/InventoryActivity.java
 }
