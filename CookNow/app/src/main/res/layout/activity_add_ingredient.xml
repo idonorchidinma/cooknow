@@ -65,4 +65,22 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TYPE_SELECTOR_SPINNER"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/INGREDIENT_TYPE_LABEL"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ingredient Type"
+        android:id="@+id/INGREDIENT_TYPE_LABEL"
+        android:layout_below="@+id/INGREDIENT_QUANTITY_EDITTEXT"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
 </RelativeLayout>

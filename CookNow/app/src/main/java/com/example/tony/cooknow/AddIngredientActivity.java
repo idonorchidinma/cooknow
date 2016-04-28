@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class AddIngredientActivity extends AppCompatActivity {
@@ -16,6 +18,12 @@ public class AddIngredientActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_ingredient);
+        setTitle("Add an Ingredient");
+
+        Spinner dropdown = (Spinner)findViewById(R.id.TYPE_SELECTOR_SPINNER);
+        String[] items = new String[]{"Dairy", "Fruits", "Vegetables", "Meat", "Other"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        dropdown.setAdapter(adapter);
 
         myAddButton = (Button) findViewById(R.id.ADD_INGREDIENT_BUTTON);
         myAddButton.setOnClickListener(new View.OnClickListener() {
