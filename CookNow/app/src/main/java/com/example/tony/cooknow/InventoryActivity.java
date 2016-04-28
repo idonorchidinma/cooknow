@@ -54,10 +54,6 @@ public class InventoryActivity extends AppCompatActivity {
         myMeatButton = (Button)findViewById(R.id.MEAT_BUTTON);
         myFruitButton = (Button)findViewById(R.id.FRUIT_BUTTON);
         myVegetablesButton = (Button)findViewById(R.id.VEGETABLES_BUTTON);
-<<<<<<< HEAD:CookNow/app/src/main/java/com/example/tony/cooknow/MainActivity.java
-        myButtonX = (Button)findViewById(R.id.BUTTON_X);
-=======
->>>>>>> origin/master:CookNow/app/src/main/java/com/example/tony/cooknow/InventoryActivity.java
         myOtherButton = (Button)findViewById(R.id.OTHER_BUTTON);
 
         // ADDS BUTTON LISTENERS TO BUTTONS
@@ -65,12 +61,7 @@ public class InventoryActivity extends AppCompatActivity {
         myMeatButton.setOnClickListener(new ActivityOnClickListener(new MeatActivity()));
         myFruitButton.setOnClickListener(new ActivityOnClickListener(new FruitActivity()));
         myVegetablesButton.setOnClickListener(new ActivityOnClickListener(new VegetablesActivity()));
-<<<<<<< HEAD:CookNow/app/src/main/java/com/example/tony/cooknow/MainActivity.java
-        myButtonX.setOnClickListener(new TestListener());
-        myOtherButton.setOnClickListener(new TestListener2());
-=======
         myOtherButton.setOnClickListener(new ActivityOnClickListener(new OtherActivity()));
->>>>>>> origin/master:CookNow/app/src/main/java/com/example/tony/cooknow/InventoryActivity.java
 
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -122,32 +113,13 @@ public class InventoryActivity extends AppCompatActivity {
         }
     }
 
-<<<<<<< HEAD:CookNow/app/src/main/java/com/example/tony/cooknow/MainActivity.java
-    private class TestListener implements View.OnClickListener {
-
-        @Override
-        public void onClick(final View theButton) {
-            Toast.makeText(MainActivity.this,"THE BUTON X WAS PRESSED BY T-dawg",
-                    Toast.LENGTH_SHORT).show();
-        }
-    }
 
     private class TestListener2 implements View.OnClickListener {
 
         @Override
         public void onClick(final View theButton) {
-            Toast.makeText(MainActivity.this,"THE OTHER BUTTON WAS PRESSED BY MIKE",
+            Toast.makeText(InventoryActivity.this,"THE OTHER BUTTON WAS PRESSED BY Tony",
                     Toast.LENGTH_SHORT).show();
         }
     }
-=======
-//    private class TestListener2 implements View.OnClickListener {
-//
-//        @Override
-//        public void onClick(final View theButton) {
-//            Toast.makeText(InventoryActivity.this,"THE OTHER BUTTON WAS PRESSED BY Tony",
-//                    Toast.LENGTH_SHORT).show();
-//        }
-//    }
->>>>>>> origin/master:CookNow/app/src/main/java/com/example/tony/cooknow/InventoryActivity.java
 }

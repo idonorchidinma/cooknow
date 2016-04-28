@@ -14,14 +14,8 @@
     android:padding="0dp">
 
     <Button
-<<<<<<< HEAD
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:drawableLeft="@android:drawable/btn_star_big_on"
-=======
         android:layout_width="182dp"
         android:layout_height="150dp"
->>>>>>> origin/master
         android:text="DAIRY"
         android:id="@+id/DAIRY_BUTTON"
         android:layout_alignParentTop="true"
@@ -33,23 +27,6 @@
 
 
     <Button
-<<<<<<< HEAD
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:text="MEAT"
-        android:id="@+id/MEAT_BUTTON"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/DAIRY_BUTTON" />
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:text="FRUIT"
-        android:id="@+id/FRUIT_BUTTON"
-        android:layout_below="@+id/DAIRY_BUTTON"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-=======
         android:layout_width="182dp"
         android:layout_height="150dp"
         android:text="MEAT"
@@ -68,24 +45,10 @@
         android:padding="0dp"
         android:background="#ffe4e4"
         android:layout_below="@+id/DAIRY_BUTTON"
->>>>>>> origin/master
         android:layout_toLeftOf="@+id/MEAT_BUTTON"
         android:layout_toStartOf="@+id/MEAT_BUTTON" />
 
     <Button
-<<<<<<< HEAD
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:text="VEGETABLES"
-        android:id="@+id/VEGETABLES_BUTTON"
-        android:layout_alignTop="@+id/FRUIT_BUTTON"
-        android:layout_toRightOf="@+id/FRUIT_BUTTON"
-        android:layout_toEndOf="@+id/FRUIT_BUTTON" />
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-=======
         android:layout_width="182dp"
         android:layout_height="150dp"
         android:text="VEGETABLES"
@@ -99,29 +62,12 @@
     <Button
         android:layout_width="182dp"
         android:layout_height="150dp"
->>>>>>> origin/master
         android:text="OTHER"
         android:id="@+id/OTHER_BUTTON"
         android:padding="0dp"
         android:background="#ffe4e4"
         android:layout_below="@+id/FRUIT_BUTTON"
-<<<<<<< HEAD
-        android:layout_toLeftOf="@+id/BUTTON_X"
-        android:layout_toStartOf="@+id/BUTTON_X" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello button"
-        android:id="@+id/BUTTON_X"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/OTHER_BUTTON"
-        android:layout_below="@+id/VEGETABLES_BUTTON" />
-
-=======
         android:layout_toLeftOf="@+id/VEGETABLES_BUTTON"
         android:layout_toStartOf="@+id/VEGETABLES_BUTTON" />
 
->>>>>>> origin/master
 </RelativeLayout>
