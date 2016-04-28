@@ -5,4 +5,6 @@ package ingredient_tree;
  */
 public class DairyIngredient extends Ingredient {
 
+
+
 }
