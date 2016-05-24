@@ -13,6 +13,12 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.tony.ingred.DairyActivity;
+import com.example.tony.ingred.FruitActivity;
+import com.example.tony.ingred.MeatActivity;
+import com.example.tony.ingred.OtherActivity;
+import com.example.tony.ingred.VegetableActivity;
+
 public class InventoryActivity extends AppCompatActivity {
 
     /** The button that brings to the list menu containing dairy.*/
@@ -29,6 +35,8 @@ public class InventoryActivity extends AppCompatActivity {
 
     private Button myOtherButton;
 
+    private Button myAddButton;
+
     /** Test button. */
     private Button myButtonX;
 
@@ -38,18 +46,18 @@ public class InventoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // Sets up activity
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_inventory);
 //        ActionBar actionBar = getActionBar();
 //        actionBar.setIcon(R.drawable.ic_list_black_24dp);
 //        actionBar.setDisplayUseLogoEnabled(true);
 //        actionBar.setDisplayHomeAsUpEnabled(true);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setLogo(R.drawable.ic_list_black_48dp);
-        setSupportActionBar(toolbar);
-        setTitle("Inventory");
+//        toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        toolbar.setLogo(R.drawable.ic_list_black_48dp);
+//        setSupportActionBar(toolbar);
 
         // CONNECTS BUTTONS IN XML LAYOUT FILE TO THIS JAVA CLASS
+        myAddButton = (Button)findViewById(R.id.ADD_BUTTON);
         myDairyButton = (Button)findViewById(R.id.DAIRY_BUTTON);
         myMeatButton = (Button)findViewById(R.id.MEAT_BUTTON);
         myFruitButton = (Button)findViewById(R.id.FRUIT_BUTTON);
@@ -60,12 +68,12 @@ public class InventoryActivity extends AppCompatActivity {
         myDairyButton.setOnClickListener(new ActivityOnClickListener(new DairyActivity()));
         myMeatButton.setOnClickListener(new ActivityOnClickListener(new MeatActivity()));
         myFruitButton.setOnClickListener(new ActivityOnClickListener(new FruitActivity()));
-        myVegetablesButton.setOnClickListener(new ActivityOnClickListener(new VegetablesActivity()));
+        myVegetablesButton.setOnClickListener(new ActivityOnClickListener(new VegetableActivity()));
         myOtherButton.setOnClickListener(new ActivityOnClickListener(new OtherActivity()));
+        myAddButton.setOnClickListener(new ActivityOnClickListener(new AddIngredientActivity()));
 
-
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new ActivityOnClickListener(new AddIngredientActivity()));
+//        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new ActivityOnClickListener(new AddIngredientActivity()));
     }
 
     @Override

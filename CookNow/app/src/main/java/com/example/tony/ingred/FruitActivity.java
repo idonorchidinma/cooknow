@@ -1,13 +1,15 @@
-package com.example.tony.cooknow;
+package com.example.tony.ingred;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SearchActivity extends AppCompatActivity {
+import com.example.tony.cooknow.R;
+
+public class FruitActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_fruit);
     }
 }
