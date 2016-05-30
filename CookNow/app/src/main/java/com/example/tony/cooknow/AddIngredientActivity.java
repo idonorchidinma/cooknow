@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.tb_laota.volleydemo.R;
+
 public class AddIngredientActivity extends AppCompatActivity {
 
     /** The button for ADDING AN INGREDIENT. */

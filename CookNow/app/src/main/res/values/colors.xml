@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#3551ff</color>
     <color name="colorAccent">#404040</color>
+
+
+    /** JSon testing */
+
+    <color name="click_start_color">#FF5722</color>
+    <color name="click_start_color_bg">#FFEB3B</color>
+    <color name="click_end_color">#4CAF50</color>
+    <color name="click_end_color_bg">#4CAF50</color>
+
+
+
+    /* end of testing */
 </resources>

@@ -4,7 +4,8 @@ import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.tony.cooknow.R;
+import com.example.tb_laota.volleydemo.R;
+
 
 public class DairyActivity extends Activity {
 
