@@ -21,29 +21,29 @@ public class MainActivity extends TabActivity {
 
         TabHost tabHost = (TabHost)findViewById(android.R.id.tabhost);
 
-        TabHost.TabSpec tab1 = tabHost.newTabSpec("tab 1");
-        TabHost.TabSpec tab2 = tabHost.newTabSpec("tab 2");
-        TabHost.TabSpec tab3 = tabHost.newTabSpec("tab 3");
-        TabHost.TabSpec tab4 = tabHost.newTabSpec("tab 4");
-        TabHost.TabSpec tab5 = tabHost.newTabSpec("tab 5");
+        TabHost.TabSpec inventoryTab = tabHost.newTabSpec("Inventory");
+        TabHost.TabSpec recipeTab = tabHost.newTabSpec("Recipes");
+        TabHost.TabSpec favoriteTab = tabHost.newTabSpec("Favorites");
+        TabHost.TabSpec historyTab = tabHost.newTabSpec("History");
+        TabHost.TabSpec searchTab = tabHost.newTabSpec("Search");
 
-        tab1.setIndicator("Tab 1");
-        tab2.setIndicator("Tab 2");
-        tab3.setIndicator("Tab 3");
-        tab4.setIndicator("Tab 4");
-        tab5.setIndicator("Tab 5");
+        inventoryTab.setIndicator("Inventory");
+        recipeTab.setIndicator("Recipes");
+        favoriteTab.setIndicator("Favorites");
+        historyTab.setIndicator("History");
+        searchTab.setIndicator("Search");
 
-        tab1.setContent(new Intent(this, InventoryActivity.class));
-        tab2.setContent(new Intent(this, RecipeActivity.class));
-        tab3.setContent(new Intent(this, FavoriteActivity.class));
-        tab4.setContent(new Intent(this, HistoryActivity.class));
-        tab5.setContent(new Intent(this, SearchActivity.class));
+        inventoryTab.setContent(new Intent(this, InventoryActivity.class));
+        recipeTab.setContent(new Intent(this, RecipeActivity.class));
+        favoriteTab.setContent(new Intent(this, FavoriteActivity.class));
+        historyTab.setContent(new Intent(this, HistoryActivity.class));
+        searchTab.setContent(new Intent(this, SearchActivity.class));
 
-        tabHost.addTab(tab1);
-        tabHost.addTab(tab2);
-        tabHost.addTab(tab3);
-        tabHost.addTab(tab4);
-        tabHost.addTab(tab5);
+        tabHost.addTab(inventoryTab);
+        tabHost.addTab(recipeTab);
+        tabHost.addTab(favoriteTab);
+        tabHost.addTab(historyTab);
+        tabHost.addTab(searchTab);
     }
 
 }
