@@ -1,37 +1,28 @@
 package com.example.tony.ingred;
 
 import android.app.ProgressDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
-
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.tb_laota.volleydemo.*;
-import com.example.tony.AppController;
-import com.example.tony.Item;
-import com.example.tony.ItemAdapter;
 
 import android.view.Menu;
 import android.view.MenuItem;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 
 public class OtherActivity extends AppCompatActivity {
-    //Change to FOOD API LINK
-    private static final String url = "http://api.androidhive.info/json/movies.json";
-    private ProgressDialog dialog;
-    private List<Item> array = new ArrayList<Item>();
 
     private ListView listView;
-    private ItemAdapter adapter;
 
 
     @Override
@@ -39,71 +30,33 @@ public class OtherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other);
 
-        listView = (ListView)findViewById(R.id.list_item);
-        adapter = new ItemAdapter(this, array);
+        Document document = null;
+        Document doc = db.parse(new URL("http://api.nal.usda.gov/ndb/search/?format=xml&q=new%20york%20steak&sort=r&max=500&offset=0&api_key=TcTyjU1OVTG8qup5D2godYBOBziTS8dBwjNlTXp8").openStream());
 
-        listView.setAdapter(adapter);
-        dialog = new ProgressDialog(this);
-        dialog.setMessage("Loading...");
-        dialog.show();
-
-
-        //create volley req for obj
-
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
-
-            @Override
-            public void onResponse(JSONArray response) {
-                hideDialog();
-
-                for(int i = 0; i<response.length(); i++){
-                    try{
-
-                        JSONObject obj = response.getJSONObject(i);
-                        Item item = new Item();
-                        item.setTitle(obj.getString("title"));
-                        item.setImage(obj.getString("image"));
-                        item.setRate(((Number) obj.get("rating")).doubleValue());
-                        item.setYear(obj.getInt ("releaseYear"));
-
-                        //genre is json array
-
-                        JSONArray genreArray = obj.getJSONArray("genre");
-                        ArrayList<String> genre = new ArrayList<String>();
-
-                        for(int j = 0; i<genreArray.length(); j++){
-                            genre.add((String) genreArray.get(j));
-                        }
-
-                        item.setGenre(genre);
-                        //add to array
-
-                        array.add(item);
-
-                    }catch (JSONException ex){
-                        ex.printStackTrace();
-                    }
-                }
-                adapter.notifyDataSetChanged();
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
-        AppController.getmInstance().addToRequestQueue(jsonArrayRequest);
-    }
-
-    public void hideDialog(){
-
-        if(dialog!=null){
-
-            dialog.dismiss();
-            dialog=null;
+        try {
+            document =  DocumentBuilderFactory.newInstance().newDocumentBuilder().parse("http://api.nal.usda.gov/ndb/list?format=json&lt=g&sort=n&api_key=xoNloOitF8uXEhuREu11T7y64Lz1tntsZGHcZwPs&location=Denver+CO");
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
         }
+
+        Element rootElement = document.getDocumentElement();
+        NodeList items = rootElement.getChildNodes();
+
+        for (int i = 0; i < items.getLength(); i++) {
+            NodeList foodItem = items.item(i).getChildNodes();
+            System.out.println(foodItem.item(foodItem.getLength()-1).toString());
+            System.out.println(foodItem.getLength());
+            for (int j = 0; j < foodItem.getLength(); j ++) {
+                System.out.println(foodItem.item(j).getLastChild().getTextContent());
+            }
+        }
+
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
