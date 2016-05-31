@@ -3,7 +3,6 @@ package com.example.tony.cooknow;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.tb_laota.volleydemo.R;
 
 public class FavoriteActivity extends AppCompatActivity {
 

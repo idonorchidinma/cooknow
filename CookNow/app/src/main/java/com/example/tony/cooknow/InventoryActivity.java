@@ -13,7 +13,6 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.tb_laota.volleydemo.R;
 import com.example.tony.ingred.DairyActivity;
 import com.example.tony.ingred.FruitActivity;
 import com.example.tony.ingred.MeatActivity;

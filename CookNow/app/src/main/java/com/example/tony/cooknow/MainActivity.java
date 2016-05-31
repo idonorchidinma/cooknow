@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TabHost;
 
-import com.example.tb_laota.volleydemo.R;
 
 /**
  * Created by Tony on 5/24/2016.
