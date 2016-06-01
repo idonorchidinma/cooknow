@@ -13,7 +13,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.tb_laota.volleydemo.R;
 
 public class AddIngredientActivity extends AppCompatActivity {
 

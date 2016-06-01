@@ -6,11 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import com.example.tb_laota.volleydemo.*;
 
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.example.tony.cooknow.R;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
