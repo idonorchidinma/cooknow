@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tb_laota.volleydemo">
 
-    package= "com.example.tb_laota.volleydemo"
-
-    >
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name ="com.example.tony.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -33,9 +30,8 @@
         <activity android:name="com.example.tony.ingred.MeatActivity" />
         <activity android:name="com.example.tony.ingred.OtherActivity" />
         <activity android:name="com.example.tony.ingred.VegetableActivity" />
-        <activity android:name="com.example.tony.ingred.FruitActivity"></activity>
+        <activity android:name="com.example.tony.ingred.FruitActivity" />
+        <activity android:name="com.example.tony.cooknow.SearchResultsActivity"></activity>
     </application>
-
-
 
 </manifest>

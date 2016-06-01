@@ -1,28 +1,35 @@
 package com.example.tony.ingred;
 
-import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.example.tb_laota.volleydemo.*;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.net.URL;
+import java.util.ArrayList;
 
+import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 
 public class OtherActivity extends AppCompatActivity {
 
-    private ListView listView;
 
 
     @Override
@@ -30,32 +37,8 @@ public class OtherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other);
 
-        Document document = null;
-        Document doc = db.parse(new URL("http://api.nal.usda.gov/ndb/search/?format=xml&q=new%20york%20steak&sort=r&max=500&offset=0&api_key=TcTyjU1OVTG8qup5D2godYBOBziTS8dBwjNlTXp8").openStream());
-
-        try {
-            document =  DocumentBuilderFactory.newInstance().newDocumentBuilder().parse("http://api.nal.usda.gov/ndb/list?format=json&lt=g&sort=n&api_key=xoNloOitF8uXEhuREu11T7y64Lz1tntsZGHcZwPs&location=Denver+CO");
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        }
-
-        Element rootElement = document.getDocumentElement();
-        NodeList items = rootElement.getChildNodes();
-
-        for (int i = 0; i < items.getLength(); i++) {
-            NodeList foodItem = items.item(i).getChildNodes();
-            System.out.println(foodItem.item(foodItem.getLength()-1).toString());
-            System.out.println(foodItem.getLength());
-            for (int j = 0; j < foodItem.getLength(); j ++) {
-                System.out.println(foodItem.item(j).getLastChild().getTextContent());
-            }
-        }
-
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -78,4 +61,6 @@ public class OtherActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
