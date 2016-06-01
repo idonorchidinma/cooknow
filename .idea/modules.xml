@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/cooknowfinal.iml" filepath="$PROJECT_DIR$/cooknowfinal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cooknow.iml" filepath="$PROJECT_DIR$/cooknow.iml" />
     </modules>
   </component>
 </project>
