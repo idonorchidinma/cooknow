@@ -26,11 +26,16 @@ public class MainActivity extends TabActivity {
         TabHost.TabSpec historyTab = tabHost.newTabSpec("History");
         TabHost.TabSpec searchTab = tabHost.newTabSpec("Search");
 
-        inventoryTab.setIndicator("Inventory");
-        recipeTab.setIndicator("Recipes");
-        favoriteTab.setIndicator("Favorites");
-        historyTab.setIndicator("History");
-        searchTab.setIndicator("Search");
+//        inventoryTab.setIndicator("Inventory");
+//        recipeTab.setIndicator("Recipes");
+//        favoriteTab.setIndicator("Favorites");
+//        historyTab.setIndicator("History");
+//        searchTab.setIndicator("Search");
+        inventoryTab.setIndicator(null, getResources().getDrawable(R.drawable.ic_list_black_48dp));
+        recipeTab.setIndicator(null, getResources().getDrawable(R.drawable.ic_chrome_reader_mode_black_48dp));
+        favoriteTab.setIndicator(null, getResources().getDrawable(R.drawable.ic_favorite_black_48dp));
+        historyTab.setIndicator(null, getResources().getDrawable(R.drawable.ic_history_black_48dp));
+        searchTab.setIndicator(null, getResources().getDrawable(R.drawable.ic_search_black_48dp));
 
         inventoryTab.setContent(new Intent(this, InventoryActivity.class));
         recipeTab.setContent(new Intent(this, RecipeActivity.class));
