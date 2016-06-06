@@ -13,6 +13,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tony.ingred.IngredArray;
+import com.example.tony.ingredientTree.DairyType;
+import com.example.tony.ingredientTree.FruitType;
+import com.example.tony.ingredientTree.Ingredient;
+import com.example.tony.ingredientTree.MeatType;
+import com.example.tony.ingredientTree.OtherType;
+import com.example.tony.ingredientTree.VegeType;
+
+import java.util.ArrayList;
+
 
 public class AddIngredientActivity extends AppCompatActivity {
 
@@ -22,8 +32,11 @@ public class AddIngredientActivity extends AppCompatActivity {
     // The edittext where the user types their ingredient.
     EditText userInput;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_ingredient);
         setTitle("Add an Ingredient");
@@ -53,6 +66,10 @@ public class AddIngredientActivity extends AppCompatActivity {
         myAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String ingredName;
+                String ingredType;
+                int ingredQuantity;
+
                 // This toasts a message.
                 //Toast.makeText(AddIngredientActivity.this, "An Ingredient has TOTALLY not been added!", Toast.LENGTH_SHORT).show();
                 // This creates a new INTENT to switch to another activity
@@ -62,7 +79,37 @@ public class AddIngredientActivity extends AppCompatActivity {
                 searchResultsIntent.putExtra("input", passingInput);
                 // This starts the intent backToMenu
                 startActivity(searchResultsIntent);
+
+
+                ingredName = ((EditText)findViewById(R.id.INGREDIENT_EDITTEXT)).getText().toString();
+                ingredType = ((Spinner)findViewById(R.id.TYPE_SELECTOR_SPINNER)).getSelectedItem().toString();
+                ingredQuantity = Integer.parseInt(((EditText)findViewById(R.id.INGREDIENT_QUANTITY_EDITTEXT)).getText().toString());
+
+                addToInventory(ingredName, ingredType, ingredQuantity);
             }
         });
+    }
+
+    private void addToInventory(String ingredName, String ingredType, int ingredQuantity) {
+        System.out.println("1. " + ingredName);
+        System.out.println("2. " + ingredType);
+        System.out.println("3. " + ingredQuantity);
+        Ingredient theIngredient = null;
+
+        if (ingredType.equals("Dairy")) {
+            theIngredient = new DairyType(ingredName, ingredQuantity);
+        } else if (ingredType.equals("Meat")) {
+            theIngredient = new MeatType(ingredName, ingredQuantity);
+        } else if (ingredType.equals("Vegetables")) {
+            theIngredient = new VegeType(ingredName, ingredQuantity);
+        } else if (ingredType.equals("Fruits")) {
+            theIngredient = new FruitType(ingredName, ingredQuantity);
+        } else if (ingredType.equals("Other")) {
+            theIngredient = new OtherType(ingredName, ingredQuantity);
+        }
+
+        IngredArray.allIngredients.add(theIngredient);
+
+
     }
 }

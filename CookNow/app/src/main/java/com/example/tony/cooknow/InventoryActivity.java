@@ -18,8 +18,11 @@ import com.example.tony.ingred.FruitActivity;
 import com.example.tony.ingred.MeatActivity;
 import com.example.tony.ingred.OtherActivity;
 import com.example.tony.ingred.VegetableActivity;
+import com.example.tony.ingredientTree.Ingredient;
 
-public class InventoryActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class InventoryActivity extends Activity {
 
     /** The button that brings to the list menu containing dairy.*/
     private Button myDairyButton;
@@ -72,8 +75,6 @@ public class InventoryActivity extends AppCompatActivity {
         myOtherButton.setOnClickListener(new ActivityOnClickListener(new OtherActivity()));
         myAddButton.setOnClickListener(new ActivityOnClickListener(new AddIngredientActivity()));
 
-//        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new ActivityOnClickListener(new AddIngredientActivity()));
     }
 
     @Override
@@ -118,16 +119,6 @@ public class InventoryActivity extends AppCompatActivity {
         public void onClick(final View theButton) {
             Intent newIntent = new Intent(InventoryActivity.this, myActivity.getClass());
             startActivity(newIntent);
-        }
-    }
-
-
-    private class TestListener2 implements View.OnClickListener {
-
-        @Override
-        public void onClick(final View theButton) {
-            Toast.makeText(InventoryActivity.this,"THE OTHER BUTTON WAS PRESSED BY Tony",
-                    Toast.LENGTH_SHORT).show();
         }
     }
 }
