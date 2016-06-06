@@ -13,10 +13,11 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
+        android:id="@+id/DAIRY_LIST_VIEW"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        tools:listitem="@android:layout/simple_list_item_1" />
     <!--<ListView-->
         <!--android:id="@+id/ITEM_LIST"-->
         <!--android:layout_width="match_parent"-->
