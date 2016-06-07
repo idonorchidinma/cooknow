@@ -17,8 +17,6 @@ import java.util.ArrayList;
 @SuppressWarnings("deprecation")
 public class MainActivity extends TabActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

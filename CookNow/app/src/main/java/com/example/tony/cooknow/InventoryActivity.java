@@ -22,7 +22,7 @@ import com.example.tony.ingredientTree.Ingredient;
 
 import java.util.ArrayList;
 
-public class InventoryActivity extends Activity {
+public class InventoryActivity extends AppCompatActivity {
 
     /** The button that brings to the list menu containing dairy.*/
     private Button myDairyButton;
@@ -50,6 +50,7 @@ public class InventoryActivity extends Activity {
         // Sets up activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inventory);
+        this.setTitle("Inventory");
 //        ActionBar actionBar = getActionBar();
 //        actionBar.setIcon(R.drawable.ic_list_black_24dp);
 //        actionBar.setDisplayUseLogoEnabled(true);
