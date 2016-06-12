@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.tony.ingred.DairyActivity;
@@ -25,18 +26,18 @@ import java.util.ArrayList;
 public class InventoryActivity extends AppCompatActivity {
 
     /** The button that brings to the list menu containing dairy.*/
-    private Button myDairyButton;
+    private ImageButton myDairyButton;
 
     /** The button that brings to the list menu containing meat.*/
-    private Button myMeatButton;
+    private ImageButton myMeatButton;
 
     /** The button that brings to the list menu containing fruit.*/
-    private Button myFruitButton;
+    private ImageButton myFruitButton;
 
     /** The button that brings to the list menu containing vegetables.*/
-    private Button myVegetablesButton;
+    private ImageButton myVegetablesButton;
 
-    private Button myOtherButton;
+    private ImageButton myOtherButton;
 
     private Button myAddButton;
 
@@ -62,11 +63,11 @@ public class InventoryActivity extends AppCompatActivity {
 
         // CONNECTS BUTTONS IN XML LAYOUT FILE TO THIS JAVA CLASS
         myAddButton = (Button)findViewById(R.id.ADD_BUTTON);
-        myDairyButton = (Button)findViewById(R.id.DAIRY_BUTTON);
-        myMeatButton = (Button)findViewById(R.id.MEAT_BUTTON);
-        myFruitButton = (Button)findViewById(R.id.FRUIT_BUTTON);
-        myVegetablesButton = (Button)findViewById(R.id.VEGETABLES_BUTTON);
-        myOtherButton = (Button)findViewById(R.id.OTHER_BUTTON);
+        myDairyButton = (ImageButton)findViewById(R.id.DAIRY_BUTTON);
+        myMeatButton = (ImageButton)findViewById(R.id.MEAT_BUTTON);
+        myFruitButton = (ImageButton)findViewById(R.id.FRUIT_BUTTON);
+        myVegetablesButton = (ImageButton)findViewById(R.id.VEGETABLES_BUTTON);
+        myOtherButton = (ImageButton)findViewById(R.id.OTHER_BUTTON);
 
         // ADDS BUTTON LISTENERS TO BUTTONS
         myDairyButton.setOnClickListener(new ActivityOnClickListener(new DairyActivity()));

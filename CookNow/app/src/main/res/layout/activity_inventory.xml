@@ -1,66 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".InventoryActivity"
     >
 
 
-        <Button
-            android:layout_width="182dp"
-            android:layout_height="150dp"
-            android:text="DAIRY"
-            android:id="@+id/DAIRY_BUTTON"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:padding="0dp"
-            android:background="#ffe4e4" />
+        <!--<Button-->
+            <!--android:layout_width="182dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:text="DAIRY"-->
+            <!--android:id="@+id/DAIRY_BUTTON"-->
+            <!--android:padding="0dp"-->
+            <!--android:background="#ffe4e4"-->
+            <!--android:layout_below="@+id/imageButton"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true" />-->
 
-        <Button
-            android:layout_width="182dp"
-            android:layout_height="150dp"
-            android:text="MEAT"
-            android:id="@+id/MEAT_BUTTON"
-            android:padding="0dp"
-            android:background="#ffe4e4"
-            android:layout_above="@+id/OTHER_BUTTON"
-            android:layout_toRightOf="@+id/OTHER_BUTTON"
-            android:layout_toEndOf="@+id/OTHER_BUTTON" />
+        <!--<Button-->
+            <!--android:layout_width="182dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:text="MEAT"-->
+            <!--android:id="@+id/MEAT_BUTTON"-->
+            <!--android:padding="0dp"-->
+            <!--android:background="#ffe4e4"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@+id/OTHER_BUTTON"-->
+            <!--android:layout_toEndOf="@+id/OTHER_BUTTON" />-->
 
-        <Button
-            android:layout_width="182dp"
-            android:layout_height="150dp"
-            android:text="FRUIT"
-            android:id="@+id/FRUIT_BUTTON"
-            android:padding="0dp"
-            android:background="#ffe4e4"
-            android:layout_below="@+id/DAIRY_BUTTON"
-            android:layout_toLeftOf="@+id/MEAT_BUTTON"
-            android:layout_toStartOf="@+id/MEAT_BUTTON" />
+        <!--<Button-->
+            <!--android:layout_width="182dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:text="FRUIT"-->
+            <!--android:id="@+id/FRUIT_BUTTON"-->
+            <!--android:padding="0dp"-->
+            <!--android:background="#ffe4e4"-->
+            <!--android:layout_below="@+id/DAIRY_BUTTON"-->
+            <!--android:layout_toLeftOf="@+id/MEAT_BUTTON"-->
+            <!--android:layout_toStartOf="@+id/MEAT_BUTTON" />-->
 
-        <Button
-            android:layout_width="182dp"
-            android:layout_height="150dp"
-            android:text="VEGETABLES"
-            android:id="@+id/VEGETABLES_BUTTON"
-            android:padding="0dp"
-            android:background="#ffe4e4"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/DAIRY_BUTTON"
-            android:layout_toEndOf="@+id/DAIRY_BUTTON" />
+        <!--<Button-->
+            <!--android:layout_width="182dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:text="VEGETABLES"-->
+            <!--android:id="@+id/VEGETABLES_BUTTON"-->
+            <!--android:padding="0dp"-->
+            <!--android:background="#ffe4e4"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_toRightOf="@+id/DAIRY_BUTTON"-->
+            <!--android:layout_toEndOf="@+id/DAIRY_BUTTON" />-->
 
-        <Button
-            android:layout_width="182dp"
-            android:layout_height="150dp"
-            android:text="OTHER"
-            android:id="@+id/OTHER_BUTTON"
-            android:padding="0dp"
-            android:background="#ffe4e4"
-            android:layout_below="@+id/FRUIT_BUTTON"
-            android:layout_toLeftOf="@+id/VEGETABLES_BUTTON"
-            android:layout_toStartOf="@+id/VEGETABLES_BUTTON" />
+        <!--<Button-->
+            <!--android:layout_width="182dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:text="OTHER"-->
+            <!--android:id="@+id/OTHER_BUTTON"-->
+            <!--android:padding="0dp"-->
+            <!--android:background="#ffe4e4"-->
+            <!--android:layout_below="@+id/FRUIT_BUTTON"-->
+            <!--android:layout_toLeftOf="@+id/VEGETABLES_BUTTON"-->
+            <!--android:layout_toStartOf="@+id/VEGETABLES_BUTTON" />-->
+
 
         <Button
             android:layout_width="50dp"
@@ -69,10 +71,57 @@
             android:background="#0015ff"
             android:text="+"
             android:id="@+id/ADD_BUTTON"
-            android:layout_alignBottom="@+id/OTHER_BUTTON"
-            android:layout_alignRight="@+id/MEAT_BUTTON"
-            android:layout_alignEnd="@+id/MEAT_BUTTON"
-            android:layout_marginRight="47dp"
-            android:layout_marginEnd="47dp" />
+            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="22dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MEAT_BUTTON"
+            android:src="@drawable/meat"
+            android:layout_alignTop="@+id/FRUIT_BUTTON"
+            android:layout_alignLeft="@+id/VEGETABLES_BUTTON"
+            android:layout_alignStart="@+id/VEGETABLES_BUTTON" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DAIRY_BUTTON"
+            android:src="@drawable/dairy"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/OTHER_BUTTON"
+            android:layout_alignEnd="@+id/OTHER_BUTTON" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/VEGETABLES_BUTTON"
+            android:src="@drawable/vegetables"
+            android:layout_above="@+id/OTHER_BUTTON"
+            android:layout_toLeftOf="@+id/OTHER_BUTTON"
+            android:layout_toStartOf="@+id/OTHER_BUTTON" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/FRUIT_BUTTON"
+            android:src="@drawable/fruit"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/OTHER_BUTTON"
+            android:layout_alignStart="@+id/OTHER_BUTTON"
+            android:layout_marginTop="43dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/OTHER_BUTTON"
+            android:src="@drawable/other"
+            android:layout_above="@+id/ADD_BUTTON"
+            android:layout_alignRight="@+id/ADD_BUTTON"
+            android:layout_alignEnd="@+id/ADD_BUTTON" />
 
 </RelativeLayout>
